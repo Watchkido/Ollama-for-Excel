@@ -11,7 +11,7 @@ JSON-Parser für VBA – Falls du JSON-Daten verarbeiten möchtest, lade die JSO
 VBA-Code zur Anbindung von Ollama
 
 Füge folgenden VBA-Code in dein Excel-VBA-Modul ein:
-
+--------------------------------------------
 Option Explicit
 
 Function OLLAMA(query As String) As String
@@ -57,6 +57,8 @@ Function OLLAMA(query As String) As String
 ErrorHandler:
     OLLAMA = "Fehler beim Parsen der JSON-Antwort: " & Err.Description
 End Function
+
+-----------------------------------------------------------
 Anleitung zur Nutzung
 
 VBA-Editor öffnen – Drücke ALT + F11 in Excel. Wenn nötig schalte die Entwicklertools frei!
