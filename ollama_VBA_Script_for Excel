@@ -1,0 +1,45 @@
+Option Explicit
+
+Function OLLAMA(query As String) As String
+    Dim http As Object
+    Dim json As Object
+    Dim url As String
+    Dim payload As String
+    Dim response As String
+    Dim result As String
+    
+    ' Setze die API-URL
+    url = "http://127.0.0.1:11434/v1/chat/completions"
+    
+    ' Erstelle das JSON-Payload
+    payload = "{""model"": ""llama3.2"", ""messages"": [{""role"": ""system"", ""content"": ""Du bist ein hilfreicher KI-Assistent. Antworte Kurz und Prägnant.""}, {""role"": ""user"", ""content"": """ & query & """}], ""temperature"": 0.3}"
+    
+    ' Erstelle die HTTP-Anfrage
+    Set http = CreateObject("MSXML2.XMLHTTP")
+    http.Open "POST", url, False
+    http.setRequestHeader "Content-Type", "application/json"
+    http.setRequestHeader "Accept-Charset", "UTF-8"
+    
+    ' Sende die Anfrage
+    http.send payload
+    
+    ' Hole die Antwort
+    response = http.responseText
+    
+    ' Debugging: Ausgabe der Antwort
+    Debug.Print "Response: " & response
+    
+    ' Parse die JSON-Antwort
+    On Error GoTo ErrorHandler
+    Set json = JsonConverter.ParseJson(response)
+    
+    ' Extrahiere das Ergebnis
+    result = json("choices")(1)("message")("content")
+    
+    ' Gib das Ergebnis zurück
+    OLLAMA = result
+    Exit Function
+    
+ErrorHandler:
+    OLLAMA = "Fehler beim Parsen der JSON-Antwort: " & Err.Description
+End Function
