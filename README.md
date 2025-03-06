@@ -23,9 +23,9 @@ Neues Modul erstellen – Gehe zu „Einfügen“ > „Modul“.
 
 Code einfügen – Kopiere den obigen VBA-Code in das Modul.
 
-JSON-Parser hinzufügen – Falls noch nicht geschehen, importiere die JsonConverter.bas. https://github.com/VBA-tools/VBA-JSON
+JSON-Parser hinzufügen – Falls noch nicht geschehen, importiere die __JsonConverter.bas__. https://github.com/VBA-tools/VBA-JSON
 
-Funktion in Excel verwenden – In einer Zelle kannst du nun _=OLLAMA("Was ist die Hauptstadt von "& A1 &"?")_ eingeben, um eine Antwort von Ollama zu erhalten.
+Funktion in Excel verwenden – In einer Zelle kannst du nun __=OLLAMA("Was ist die Hauptstadt von "& A1 &"?")__ eingeben, um eine Antwort von Ollama zu erhalten.
 
 Fazit
 
