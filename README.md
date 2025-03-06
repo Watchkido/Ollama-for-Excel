@@ -1,4 +1,4 @@
-n diesem Beitrag zeige ich dir, wie du Ollama lokal auf deinem Computer betreibst und die KI direkt in Excel mit VBA ansprichst. Diese Methode erlaubt es dir, AI-gestützte Funktionen zu nutzen, ohne auf eine Internetverbindung angewiesen zu sein.
+In diesem Beitrag zeige ich dir, wie du Ollama lokal auf deinem Computer betreibst und die KI direkt in Excel mit VBA ansprichst. Diese Methode erlaubt es dir, AI-gestützte Funktionen zu nutzen, ohne auf eine Internetverbindung angewiesen zu sein.
 
 Voraussetzungen
 
